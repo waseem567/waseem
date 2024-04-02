@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body {
+  background-color: #161513;
+  color: white;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1E1E1D;
+  height: 82px;
+}
+
+.navbar .list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.navbar .list .link:hover{
+  color: rgb(9, 54, 236);
+}
+
+.hero{
+  min-height: calc(100vh - 82px);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+  gap: 20px;
+}
+.hero .avatar{
+  height: 213px;
+  width: 213px;
+  background: linear-gradient(137.59deg, #A160FF 9.86%, #8000FF 104.95%);
+  border-radius: 100%;
+}
+.hero .bold_text{
+  font-size: 55px;
+  font-weight: 900;
+  text-align: center;
+  line-height: 64px;
+}
+.hero .colorfull_text{
+  color: aqua;
+}
+.hero .para{
+  font-size: 17px;
+  font-weight: 200;
+  text-align: center;
+}
+.btn_wrapper{
+  display: flex ;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.btn{
+  height: 65px;
+  width: 195px;
+  border: 2px solid white;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 22px;
+  background: white;
+  color: black;
+}
+.btn:hover{
+  background: black;
+  color: white;
+}
+.cv_btn{
+  height: 65px;
+  width: 195px;
+  border: 2px solid white;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 22px;
+}
+.cv_btn:hover{
+  background: white;
+  color: black;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #161513;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1f1f1f;
+  border-radius: 30px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2e2e2e;
+}
+
+.exp{
+  background: -webkit-linear-gradient(180deg, #5BADFF 0%, #1373D1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
