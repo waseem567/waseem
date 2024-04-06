@@ -9,7 +9,7 @@ function Hero() {
         <Image src={avatar} alt="avatar of main page" />
       </div>
       <p className="bold_text">
-        I do code and <br /> make content{" "}
+        I am Waseem <br />
         <span className="colorfull_text">about it!</span>
       </p>
       <p className="para text-slate-200">

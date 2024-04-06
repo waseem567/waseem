@@ -7,6 +7,7 @@
 body {
   background-color: #161513;
   color: white;
+  overflow-x: hidden;
 }
 .navbar{
   display: flex;
@@ -110,6 +111,12 @@ body {
 
 .exp{
   background: -webkit-linear-gradient(180deg, #5BADFF 0%, #1373D1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact{
+  background: -webkit-linear-gradient(180deg, #049b40 0%, #026a09 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
