@@ -2,67 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 body {
   background-color: #161513;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   color: white;
   overflow-x: hidden;
 }
-.navbar{
-  display: flex;
+.navbar {
   justify-content: space-between;
   align-items: center;
-  background-color: #1E1E1D;
-  height: 82px;
+  background-color: #1e1e1d;
 }
-
-.navbar .list{
+.bg-light {
+  background-color: #1e1e1d;
+}
+.navbar .list {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 40px;
 }
-.navbar .list .link:hover{
+.navbar .list .link:hover {
   color: rgb(9, 54, 236);
 }
 
-.hero{
-  min-height: calc(100vh - 82px);
+.hero {
+  min-height: 700px;
   display: flex;
   justify-content: start;
   align-items: center;
   flex-direction: column;
   padding-top: 2rem;
   gap: 20px;
+  background: #000000;
+  --gap: 5em;
+  --line: 1px;
+  --color: rgba(255, 255, 255, 0.2);
+
+  background-image: linear-gradient(
+      -90deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    ),
+    linear-gradient(
+      0deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    );
+  clip-path: polygon(1% 1%, 100% 0, 100% 81%, 0% 100%);
+  background-size: var(--gap) var(--gap);
 }
-.hero .avatar{
+.hero .avatar {
   height: 213px;
   width: 213px;
-  background: linear-gradient(137.59deg, #A160FF 9.86%, #8000FF 104.95%);
+  background: linear-gradient(137.59deg, #a160ff 9.86%, #8000ff 104.95%);
   border-radius: 100%;
 }
-.hero .bold_text{
+.hero .bold_text {
   font-size: 55px;
   font-weight: 900;
   text-align: center;
   line-height: 64px;
 }
-.hero .colorfull_text{
+.hero .colorfull_text {
   color: aqua;
 }
-.hero .para{
-  font-size: 17px;
-  font-weight: 200;
-  text-align: center;
-}
-.btn_wrapper{
-  display: flex ;
+
+.btn_wrapper {
+  display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
-.btn{
+.btn {
   height: 65px;
   width: 195px;
   border: 2px solid white;
@@ -72,11 +88,11 @@ body {
   background: white;
   color: black;
 }
-.btn:hover{
+.btn:hover {
   background: black;
   color: white;
 }
-.cv_btn{
+.cv_btn {
   height: 65px;
   width: 195px;
   border: 2px solid white;
@@ -84,7 +100,7 @@ body {
   font-weight: 700;
   font-size: 22px;
 }
-.cv_btn:hover{
+.cv_btn:hover {
   background: white;
   color: black;
 }
@@ -100,23 +116,85 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #1f1f1f;
+  background: #e3e3e3;
   border-radius: 30px;
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #2e2e2e;
-}
-
-.exp{
-  background: -webkit-linear-gradient(180deg, #5BADFF 0%, #1373D1 100%);
+.exp {
+  background: -webkit-linear-gradient(180deg, #5badff 0%, #1373d1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-.contact{
+.golden_text {
+  background: -webkit-linear-gradient(180deg, #fda203 0%, #d4bb03 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.contact {
   background: -webkit-linear-gradient(180deg, #049b40 0%, #026a09 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+/* ui verse hamburger */
+.hamburger {
+  cursor: pointer;
+}
+
+.hamburger input {
+  display: none;
+}
+
+.hamburger svg {
+  /* The size of the SVG defines the overall size */
+  height: 3em;
+  /* Define the transition for transforming the SVG */
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+  fill: none;
+  stroke: white;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  /* Define the transition for transforming the Stroke */
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+  transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+/* animate spin */
+.animate_spin {
+  animation: spin 20s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes icons {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.html {
+  animation: icons 20s linear infinite;
+  text-shadow: #eeee00 0 0 10px, #ff0000 5px 5px 5px !important;
 }

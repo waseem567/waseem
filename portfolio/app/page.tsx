@@ -5,17 +5,19 @@ import Image from "next/image";
 import Technologies from "@/UI/technologies/Technologies";
 import Experience from "@/UI/experience/Experience";
 import Footer from "@/UI/footer/Footer";
+import MobileNav from "@/UI/navbar/Mobile";
 
 export default function Home() {
   return (
     <main className="min-h-screen ">
       <div className="container max-w-screen-xl mx-auto">
-      <Navbar />
-      <Hero />
-      <Technologies />
-      <Projects />
-      <Experience />
-      <Footer />
+        <Navbar />
+        <MobileNav />
+        <Hero />
+        <Technologies />
+        <Projects />
+        <Experience />
+        <Footer />
       </div>
     </main>
   );

@@ -4,23 +4,32 @@ import avatar from "@/public/Avatar.png";
 
 function Hero() {
   return (
-    <div className="hero">
-      <div className="avatar">
-        <Image src={avatar} alt="avatar of main page" />
+    <>
+      <div className="hero w-screen translate-x-[-50%] ml-[50%] relative z-10mx-auto">
+        <div className="avatar">
+          <Image src={avatar} alt="avatar of main page" />
+        </div>
+        <p className="bold_text">
+          I am Waseem <br />
+          <span className="colorfull_text">Full Stack Developer</span>
+        </p>
+
+        <div className="btn_wrapper sm:flex-row flex-col">
+          <button className="btn">Get In Touch</button>
+          <a className="" href="cv-waseem.pdf" title="" download>
+            <button className="cv_btn">Download CV</button>
+          </a>
+        </div>
       </div>
-      <p className="bold_text">
-        I am Waseem <br />
-        <span className="colorfull_text">about it!</span>
-      </p>
-      <p className="para text-slate-200">
-        I am a seasoned full-stack software engineer with over <br />
-        8 years of professional experience, specializing in backend development.{" "}
-        <br />
-        My expertise lies in crafting robust and scalable SaaS-based <br />
-        architectures on the Amazon AWS platform.
-      </p>
-      <div className="btn_wrapper sm:flex-row flex-col"><button className="btn">Get In Touch</button><button className="cv_btn">Download CV</button></div>
-    </div>
+      <div className="relative">
+        <p className="absolute bottom-10 left-[50%] translate-x-[-50%] font-extralight text-lg mx-auto w-full text-center text-slate-200 z-20">
+          I'm a seasoned MERN stack developer <br /> with expertise in Next.js
+          and Nest.js frameworks, <br /> alongside proficiency in software
+          testing. With a year of experience, <br /> I specialize in crafting
+          scalable solutions that prioritize performance and quality.
+        </p>
+      </div>
+    </>
   );
 }
 
