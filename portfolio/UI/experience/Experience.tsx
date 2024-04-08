@@ -17,7 +17,11 @@ const EXPERIENCE = [
 ];
 function Experience() {
   return (
-    <div id="experience" className="my-20 max-w-[700px] mx-auto">
+    <div
+      data-aos="fade-up"
+      id="experience"
+      className="my-20 max-w-[700px] mx-auto"
+    >
       <p className="text-4xl font-extrabold exp text-center my-10">
         EXPERIENCE
       </p>
