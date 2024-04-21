@@ -5,7 +5,7 @@ import avatar from "@/public/Avatar.png";
 function Hero() {
   return (
     <>
-      <div className="hero w-screen translate-x-[-50%] ml-[50%] relative z-10mx-auto">
+      <div className="hero hover:bg-gray-950 w-screen translate-x-[-50%] ml-[50%] relative z-10 mx-auto">
         <div className="avatar">
           <Image src={avatar} alt="avatar of main page" />
         </div>
